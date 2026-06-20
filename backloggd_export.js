@@ -16,6 +16,9 @@
      4. Paste this whole file, press Enter. A CSV downloads when it finishes.
    It runs in your own session, so it reads YOUR data and works on a private
    profile. Progress + a status breakdown print to the console.
+
+   Built with Claude (Anthropic). As with any console script, give it a read
+   before you paste it.
    ========================================================================== */
 (async () => {
   const POLITE_DELAY_MS = 400;  // pause between page requests

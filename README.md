@@ -32,6 +32,9 @@ It runs in your own logged-in tab, so it reads **your** ratings and statuses and
      4. Paste this whole file, press Enter. A CSV downloads when it finishes.
    It runs in your own session, so it reads YOUR data and works on a private
    profile. Progress + a status breakdown print to the console.
+
+   Built with Claude (Anthropic). As with any console script, give it a read
+   before you paste it.
    ========================================================================== */
 (async () => {
   const POLITE_DELAY_MS = 400;  // pause between page requests
@@ -187,6 +190,10 @@ It runs in your own logged-in tab, so it reads **your** ratings and statuses and
 It walks your Played / Playing / Backlog / Wishlist tabs and reads each game card directly: title from the cover image's `alt`, rating from the card's `data-rating`, status from `data-status-title` (falling back to the gamepad button's `play_type`), and backlog from whether the game shows up under the Backlog tab. No journal scraping and no per-game requests — just a handful of page loads that cover your whole library.
 
 Built against the current Backloggd layout; if the site changes its markup, the selectors may need updating.
+
+## Disclaimer
+
+Built with the help of [Claude](https://claude.ai), Anthropic's AI assistant. As with any script you paste into your browser console, it's worth reading through it first.
 
 ## License
 
