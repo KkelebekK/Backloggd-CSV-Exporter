@@ -193,7 +193,7 @@ Built against the current Backloggd layout; if the site changes its markup, the 
 
 ## Disclaimer
 
-Built with the help of [Claude](https://claude.ai), Anthropic's AI assistant. As with any script you paste into your browser console, it's worth reading through it first.
+Built with the help of [Claude](https://claude.ai).
 
 ## License
 
