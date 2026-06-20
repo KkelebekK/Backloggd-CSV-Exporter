@@ -1,19 +1,3 @@
-# Backloggd CSV Export
-
-Export your [Backloggd](https://backloggd.com) library to a CSV file — including the completion statuses (Completed / Retired / Shelved / Abandoned) that the site's grid normally hides. Backloggd has no built-in export, so this fills the gap.
-
-No installs, no account access, nothing to download. It's a single script you paste into your browser's console.
-
-## Quick start
-
-1. Log in to Backloggd and open your games page: `https://backloggd.com/u/<your-username>/games`
-2. Press **F12** and click the **Console** tab. *(If it blocks pasting, type `allow pasting` and press Enter first.)*
-3. **Copy the whole script below** — hover over the box and click the copy icon in its top-right corner — then paste it into the console and press **Enter**.
-4. A `backloggd_<username>.csv` downloads when it finishes. That's it.
-
-It runs in your own logged-in tab, so it reads **your** ratings and statuses and works even on a private profile.
-
-```js
 /* ============================================================================
    Backloggd → CSV exporter  (Title, Rating, Status, Backlog)
    ----------------------------------------------------------------------------
@@ -171,23 +155,3 @@ It runs in your own logged-in tab, so it reads **your** ratings and statuses and
   console.log(`✅ Done — ${games.size} games → backloggd_${username}.csv  (${backlogged} backlogged)`);
   console.table(counts);
 })();
-```
-
-## What you get
-
-| Column | Values |
-| --- | --- |
-| **Title** | Game name |
-| **Rating** | Your rating, `0`–`5` (blank if unrated) |
-| **Status** | `Played` · `Completed` · `Retired` · `Shelved` · `Abandoned` · `Playing` · `Wishlist` (blank if a game is only backlogged) |
-| **Backlog** | `Yes` / blank — a separate column, since a game can be e.g. *Shelved* **and** backlogged at the same time |
-
-## How it works
-
-It walks your Played / Playing / Backlog / Wishlist tabs and reads each game card directly: title from the cover image's `alt`, rating from the card's `data-rating`, status from `data-status-title` (falling back to the gamepad button's `play_type`), and backlog from whether the game shows up under the Backlog tab. No journal scraping and no per-game requests — just a handful of page loads that cover your whole library.
-
-Built against the current Backloggd layout; if the site changes its markup, the selectors may need updating.
-
-## License
-
-[MIT](LICENSE)
