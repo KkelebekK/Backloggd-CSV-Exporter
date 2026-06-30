@@ -8,7 +8,7 @@ No installs, no account access, nothing to download. It's a single script you pa
 
 1. Log in to Backloggd and open your games page: `https://backloggd.com/u/<your-username>/games`
 2. Press **F12** and click the **Console** tab. *(If it blocks pasting, type `allow pasting` and press Enter first.)*
-3. **Copy the whole script below** — hover over the box and click the copy icon in its top-right corner — then paste it into the console and press **Enter**.
+3. **Copy the whole script below**
 4. A `backloggd_<username>.csv` downloads when it finishes. That's it.
 
 It runs in your own logged-in tab, so it reads **your** ratings and statuses and works even on a private profile.
